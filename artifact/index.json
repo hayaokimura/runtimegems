@@ -11,5 +11,13 @@
       "humidity",
       "I2C"
     ]
+  },
+  {
+    "name": "picoruby-qmi8658",
+    "repo": "https://github.com/0x6b/picoruby-qmi8658",
+    "path": null,
+    "ref": "main",
+    "description": "A QMI8658 6-axis IMU driver for PicoRuby.",
+    "tags": []
   }
 ]
