@@ -3,7 +3,7 @@ require 'json'
 require 'net/http'
 require 'uri'
 
-REQUIRED_FIELDS = %w[name repo path ref description].freeze
+REQUIRED_FIELDS = %w[name repo ref description].freeze
 
 # ------------------------------------------------------------------
 # GitHub API helpers
@@ -41,13 +41,14 @@ def validate_gem(data, filename)
   ref      = data['ref']
 
   owner, repo_name = parse_repo_owner_name(repo_url)
-  api_base = "/repos/#{owner}/#{repo_name}/contents/#{path}"
+  contents_root = path.to_s.strip.empty? ? '' : "/#{path}"
+  api_base  = "/repos/#{owner}/#{repo_name}/contents#{contents_root}"
   ref_param = "?ref=#{ref}"
 
   # 1. repo/path is accessible
-  code, body = github_api_get("#{api_base}#{ref_param}")
+  code, _body = github_api_get("#{api_base}#{ref_param}")
   unless code == 200
-    raise "#{filename}: repo/path not accessible (HTTP #{code}): #{repo_url}/#{path} @ #{ref}"
+    raise "#{filename}: repo/path not accessible (HTTP #{code}): #{repo_url}#{contents_root} @ #{ref}"
   end
 
   # 2. mrbgem.rake exists and is syntax-valid Ruby
