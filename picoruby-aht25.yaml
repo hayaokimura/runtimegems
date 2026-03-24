@@ -1,0 +1,10 @@
+name: picoruby-aht25
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-aht25
+ref: master
+description: AHT25 temperature and humidity sensor library for PicoRuby.
+tags:
+  - AHT25
+  - temperature
+  - humidity
+  - I2C
