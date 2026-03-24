@@ -1,0 +1,34 @@
+name: Update index.json
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          working-directory: script
+          bundler-cache: true
+
+      - name: Run updater
+        run: bundle exec ruby updater.rb
+        working-directory: script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit updated index.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add artifact/index.json
+          git diff --cached --quiet || git commit -m "Update index.json"
+          git push
