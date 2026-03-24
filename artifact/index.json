@@ -13,6 +13,21 @@
     ]
   },
   {
+    "name": "picoruby-bno055",
+    "repo": "https://github.com/hayaokimura/picoruby-bno055",
+    "path": null,
+    "ref": "main",
+    "description": "BNO055 9-axis IMU sensor driver for PicoRuby.",
+    "tags": [
+      "BNO055",
+      "IMU",
+      "accelerometer",
+      "magnetometer",
+      "gyroscope",
+      "I2C"
+    ]
+  },
+  {
     "name": "picoruby-qmi8658",
     "repo": "https://github.com/0x6b/picoruby-qmi8658",
     "path": null,
