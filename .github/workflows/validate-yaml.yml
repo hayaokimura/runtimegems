@@ -1,0 +1,77 @@
+name: Validate YAML references
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get changed YAML files
+        id: changed
+        run: |
+          files=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep '^[^/]*\.yaml$' || true)
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$files" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate repo, path, and ref
+        if: steps.changed.outputs.files != ''
+        run: |
+          exit_code=0
+
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            [ ! -f "$file" ] && continue
+
+            name=$(yq '.name' "$file")
+            repo_url=$(yq '.repo' "$file")
+            path=$(yq '.path' "$file")
+            ref=$(yq '.ref' "$file")
+
+            # Extract owner/repo from URL (https://github.com/owner/repo)
+            owner_repo=$(echo "$repo_url" | sed 's|https://github.com/||')
+
+            echo "::group::Validating $file ($name)"
+            echo "  repo: $owner_repo"
+            echo "  path: $path"
+            echo "  ref:  $ref"
+
+            # Check if the repo exists
+            if ! gh api "repos/$owner_repo" --silent 2>/dev/null; then
+              echo "::error file=$file::Repository $repo_url does not exist"
+              exit_code=1
+              echo "::endgroup::"
+              continue
+            fi
+
+            # Check if the ref (branch or tag) exists
+            if ! gh api "repos/$owner_repo/git/ref/heads/$ref" --silent 2>/dev/null && \
+               ! gh api "repos/$owner_repo/git/ref/tags/$ref" --silent 2>/dev/null; then
+              echo "::error file=$file::Ref '$ref' does not exist in $repo_url"
+              exit_code=1
+              echo "::endgroup::"
+              continue
+            fi
+
+            # Check if the path exists at the given ref
+            if ! gh api "repos/$owner_repo/contents/$path?ref=$ref" --silent 2>/dev/null; then
+              echo "::error file=$file::Path '$path' does not exist at ref '$ref' in $repo_url"
+              exit_code=1
+            else
+              echo "  All references valid."
+            fi
+
+            echo "::endgroup::"
+          done <<< "${{ steps.changed.outputs.files }}"
+
+          exit $exit_code
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
