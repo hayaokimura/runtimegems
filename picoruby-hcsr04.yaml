@@ -1,0 +1,10 @@
+name: picoruby-hcsr04
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-hcsr04
+ref: master
+description: HC-SR04 ultrasonic distance sensor driver for PicoRuby.
+tags:
+  - HC-SR04
+  - ultrasonic
+  - distance
+  - GPIO

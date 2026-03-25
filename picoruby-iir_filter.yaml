@@ -1,0 +1,9 @@
+name: picoruby-iir_filter
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-iir_filter
+ref: master
+description: IIR (Infinite Impulse Response) filter for signal smoothing and noise reduction.
+tags:
+  - IIR filter
+  - signal processing
+  - filter

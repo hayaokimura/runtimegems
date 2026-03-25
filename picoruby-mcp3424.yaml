@@ -1,0 +1,10 @@
+name: picoruby-mcp3424
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-mcp3424
+ref: master
+description: MCP3424 18-bit ADC (Analog-to-Digital Converter) library for PicoRuby.
+tags:
+  - MCP3424
+  - ADC
+  - I2C
+  - 18-bit

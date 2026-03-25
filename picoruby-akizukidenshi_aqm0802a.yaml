@@ -1,0 +1,10 @@
+name: picoruby-akizukidenshi_aqm0802a
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-akizukidenshi_aqm0802a
+ref: master
+description: AQM0802A 8x2 character LCD display library for PicoRuby.
+tags:
+  - AQM0802A
+  - LCD
+  - display
+  - I2C

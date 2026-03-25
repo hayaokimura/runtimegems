@@ -1,0 +1,10 @@
+name: picoruby-dip_switch
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-dip_switch
+ref: master
+description: DIP switch reader library for PicoRuby supporting positive and negative logic.
+tags:
+  - DIP switch
+  - GPIO
+  - switch
+  - input

@@ -1,0 +1,10 @@
+name: picoruby-adafruit_pcf8523
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-adafruit_pcf8523
+ref: master
+description: PCF8523 I2C Real-Time Clock (RTC) module driver for PicoRuby.
+tags:
+  - PCF8523
+  - RTC
+  - real-time clock
+  - I2C
