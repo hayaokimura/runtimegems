@@ -17,20 +17,22 @@ Fork this repository, add a new `[name].yaml` file that contains your gem's info
  
 ### Example
 
-All the items other than `tags` and `path` are mandatory. When `path` is blank, `mrbgem.rake` and `mrblib/` are supposed to locate at the top directory.
-
 ```yaml
 name: picoruby-aht25
 repo: https://github.com/picoruby/picoruby
 path: mrbgems/picoruby-aht25/
 ref: master
-description": AHT25 temperature and humidity sensor library for PicoRuby.
+description: AHT25 sensor library for PicoRuby
 tags:
   - AHT25
   - temperature
   - humidity
   - I2C
 ```
+
+- All the items other than `path` and `tags` are mandatory
+- When `path` is blank, `mrbgem.rake` and `mrblib/` are supposed to locate at the top directory
+- Keep the `description` concise
 
 ## Disclaimer
 
