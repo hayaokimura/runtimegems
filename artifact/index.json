@@ -39,6 +39,35 @@
     ]
   },
   {
+    "name": "picoruby-ble-hid",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-ble-hid",
+    "ref": "master",
+    "description": "BLE HID (Human Interface Device) wrapper for PicoRuby. Supports keyboard, mouse, and consumer control over Bluetooth.",
+    "tags": [
+      "BLE",
+      "HID",
+      "Bluetooth",
+      "keyboard",
+      "mouse",
+      "consumer control"
+    ]
+  },
+  {
+    "name": "picoruby-ble-uart",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-ble-uart",
+    "ref": "master",
+    "description": "BLE UART (Nordic UART Service) wrapper for PicoRuby. Supports both peripheral and central roles for wireless serial communication.",
+    "tags": [
+      "BLE",
+      "UART",
+      "Nordic UART Service",
+      "Bluetooth",
+      "wireless serial"
+    ]
+  },
+  {
     "name": "picoruby-bno055",
     "repo": "https://github.com/hayaokimura/picoruby-bno055",
     "path": null,
