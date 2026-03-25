@@ -1,0 +1,10 @@
+name: picoruby-rtd
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-rtd
+ref: master
+description: RTD (Resistance Temperature Detector) library supporting PT100 sensors.
+tags:
+  - RTD
+  - PT100
+  - temperature
+  - sensor

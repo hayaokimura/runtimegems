@@ -1,0 +1,11 @@
+name: picoruby-quectel_cellular
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-quectel_cellular
+ref: master
+description: Quectel cellular module driver for PicoRuby with UDP and HTTPS support.
+tags:
+  - Quectel
+  - cellular
+  - LTE
+  - UART
+  - IoT

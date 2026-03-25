@@ -1,0 +1,10 @@
+name: picoruby-rotary_encoder
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-rotary_encoder
+ref: master
+description: Rotary encoder driver for PicoRuby using quadrature decoding via IRQ.
+tags:
+  - rotary encoder
+  - quadrature
+  - GPIO
+  - IRQ

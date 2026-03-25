@@ -1,0 +1,11 @@
+name: picoruby-mcp3x0x
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-mcp3x0x
+ref: master
+description: MCP3004/3008/3204/3208 SPI ADC driver for PicoRuby.
+tags:
+  - MCP3x0x
+  - ADC
+  - SPI
+  - 10-bit
+  - 12-bit
