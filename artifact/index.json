@@ -1,5 +1,18 @@
 [
   {
+    "name": "picoruby-adafruit_pcf8523",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-adafruit_pcf8523",
+    "ref": "master",
+    "description": "PCF8523 I2C Real-Time Clock (RTC) module driver for PicoRuby.",
+    "tags": [
+      "PCF8523",
+      "RTC",
+      "real-time clock",
+      "I2C"
+    ]
+  },
+  {
     "name": "picoruby-aht25",
     "repo": "https://github.com/picoruby/picoruby",
     "path": "mrbgems/picoruby-aht25",
@@ -9,6 +22,19 @@
       "AHT25",
       "temperature",
       "humidity",
+      "I2C"
+    ]
+  },
+  {
+    "name": "picoruby-akizukidenshi_aqm0802a",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-akizukidenshi_aqm0802a",
+    "ref": "master",
+    "description": "AQM0802A 8x2 character LCD display library for PicoRuby.",
+    "tags": [
+      "AQM0802A",
+      "LCD",
+      "display",
       "I2C"
     ]
   },
@@ -28,11 +54,116 @@
     ]
   },
   {
+    "name": "picoruby-dip_switch",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-dip_switch",
+    "ref": "master",
+    "description": "DIP switch reader library for PicoRuby supporting positive and negative logic.",
+    "tags": [
+      "DIP switch",
+      "GPIO",
+      "switch",
+      "input"
+    ]
+  },
+  {
+    "name": "picoruby-hcsr04",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-hcsr04",
+    "ref": "master",
+    "description": "HC-SR04 ultrasonic distance sensor driver for PicoRuby.",
+    "tags": [
+      "HC-SR04",
+      "ultrasonic",
+      "distance",
+      "GPIO"
+    ]
+  },
+  {
+    "name": "picoruby-iir_filter",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-iir_filter",
+    "ref": "master",
+    "description": "IIR (Infinite Impulse Response) filter for signal smoothing and noise reduction.",
+    "tags": [
+      "IIR filter",
+      "signal processing",
+      "filter"
+    ]
+  },
+  {
+    "name": "picoruby-mcp3424",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-mcp3424",
+    "ref": "master",
+    "description": "MCP3424 18-bit ADC (Analog-to-Digital Converter) library for PicoRuby.",
+    "tags": [
+      "MCP3424",
+      "ADC",
+      "I2C",
+      "18-bit"
+    ]
+  },
+  {
+    "name": "picoruby-mcp3x0x",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-mcp3x0x",
+    "ref": "master",
+    "description": "MCP3004/3008/3204/3208 SPI ADC driver for PicoRuby.",
+    "tags": [
+      "MCP3x0x",
+      "ADC",
+      "SPI",
+      "10-bit",
+      "12-bit"
+    ]
+  },
+  {
     "name": "picoruby-qmi8658",
     "repo": "https://github.com/0x6b/picoruby-qmi8658",
     "path": null,
     "ref": "main",
     "description": "A QMI8658 6-axis IMU driver for PicoRuby.",
     "tags": []
+  },
+  {
+    "name": "picoruby-quectel_cellular",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-quectel_cellular",
+    "ref": "master",
+    "description": "Quectel cellular module driver for PicoRuby with UDP and HTTPS support.",
+    "tags": [
+      "Quectel",
+      "cellular",
+      "LTE",
+      "UART",
+      "IoT"
+    ]
+  },
+  {
+    "name": "picoruby-rotary_encoder",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-rotary_encoder",
+    "ref": "master",
+    "description": "Rotary encoder driver for PicoRuby using quadrature decoding via IRQ.",
+    "tags": [
+      "rotary encoder",
+      "quadrature",
+      "GPIO",
+      "IRQ"
+    ]
+  },
+  {
+    "name": "picoruby-rtd",
+    "repo": "https://github.com/picoruby/picoruby",
+    "path": "mrbgems/picoruby-rtd",
+    "ref": "master",
+    "description": "RTD (Resistance Temperature Detector) library supporting PT100 sensors.",
+    "tags": [
+      "RTD",
+      "PT100",
+      "temperature",
+      "sensor"
+    ]
   }
 ]
