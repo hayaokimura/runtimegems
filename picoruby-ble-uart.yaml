@@ -1,0 +1,11 @@
+name: picoruby-ble-uart
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-ble-uart
+ref: master
+description: BLE UART (Nordic UART Service) wrapper for PicoRuby. Supports both peripheral and central roles for wireless serial communication.
+tags:
+  - BLE
+  - UART
+  - Nordic UART Service
+  - Bluetooth
+  - wireless serial

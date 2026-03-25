@@ -1,0 +1,12 @@
+name: picoruby-ble-hid
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-ble-hid
+ref: master
+description: BLE HID (Human Interface Device) wrapper for PicoRuby. Supports keyboard, mouse, and consumer control over Bluetooth.
+tags:
+  - BLE
+  - HID
+  - Bluetooth
+  - keyboard
+  - mouse
+  - consumer control
