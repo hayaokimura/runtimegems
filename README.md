@@ -1,16 +1,20 @@
+[![C/C++ CI](https://github.com/picoruby/runtimegems/actions/workflows/update-index.yml/badge.svg)](https://github.com/picoruby/runtimegems/actions/workflows/update-index.yml)
+
 # RuntimeGems for PicoRuby
 
-## Usage
+RuntimeGems are a collection of libraries for PicoRuby, implemented in pure Ruby.
+You can upload them to R2P2 via https://picoruby.org/runtimegems.
 
-Go to https://picoruby.org/runtimegems
+Support for this feature will be available in an upcoming R2P2 release, scheduled just before [RubyKaigi 2026](https://rubykaigi.org/2026/).
 
-## Contributing
+## Adding a Gem
 
-Fork this repository, add a new `[gem name].yaml` file that contains your gem's info, and send the PR.
+Fork this repository, add a new `[name].yaml` file that contains your gem's info, and send the PR.
 
-- `[gem name]` must be unique
+- `[name]` must be unique
 - RuntimeGem must contain only Ruby implementation. C implementation is never going to be handled
-
+- In general, `[name]` should start with "picoruby-". If it has a reason not to do, you need to write `spec.require_name "hoge"` in mrbgem.rake so that you can load it by `require "hoge"`
+ 
 ### Example
 
 All the items other than `tags` and `path` are mandatory. When `path` is blank, `mrbgem.rake` and `mrblib/` are supposed to locate at the top directory.
