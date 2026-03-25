@@ -13,7 +13,7 @@ Fork this repository, add a new `[gem name].yaml` file that contains your gem's 
 
 ### Example
 
-All the items other than `tags` are mandatory.
+All the items other than `tags` and `path` are mandatory. When `path` is blank, `mrbgem.rake` and `mrblib/` are supposed to locate at the top directory.
 
 ```yaml
 name: picoruby-aht25
