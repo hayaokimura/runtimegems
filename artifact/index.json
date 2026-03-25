@@ -194,5 +194,19 @@
       "temperature",
       "sensor"
     ]
+  },
+  {
+    "name": "picoruby-ws2812",
+    "repo": "https://github.com/ksbmyk/picoruby-ws2812",
+    "path": null,
+    "ref": "main",
+    "description": "WS2812 addressable LED driver for PicoRuby.",
+    "tags": [
+      "WS2812",
+      "LED",
+      "addressable LED",
+      "RMT",
+      "PIO"
+    ]
   }
 ]
