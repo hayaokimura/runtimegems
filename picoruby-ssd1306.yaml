@@ -1,0 +1,10 @@
+name: picoruby-ssd1306
+repo: https://github.com/picoruby/picoruby
+path: mrbgems/picoruby-ssd1306
+ref: master
+description: SSD1306 OLED display driver for PicoRuby.
+tags:
+  - SSD1306
+  - OLED
+  - display
+  - I2C
